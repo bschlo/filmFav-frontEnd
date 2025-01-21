@@ -1,11 +1,48 @@
- nav {
-    color: black;
- }
-
- li {
+body, ul, li {
+    margin: 0;
+    padding: 0;
     list-style: none;
- }
-
- a:visited {
-    color: black;
- }
+  }
+  
+  .navbar {
+    background-color: black;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    flex-direction: row;
+    border-radius: 10px;
+  }
+  
+  img {
+    height: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-links a:hover {
+    color: #ff9800;
+  }
+  

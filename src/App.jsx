@@ -8,10 +8,10 @@ import SigninForm from './components/SignInForm/SigninForm';
 import * as authService from '../src/services/authService';
 import BaseLayout from './components/BaseLayout/BaseLayout.jsx';
 
-export const AuthedUserContext = createContext(null); // Set the initial value of the context to null
+export const AuthedUserContext = createContext(null);
 
 const App = () => {
-	const [user, setUser] = useState(authService.getUser()); // Using the method from authService
+	const [user, setUser] = useState(authService.getUser());
 
 	useEffect(() => {
 		const loggedInUser = authService.getUser();

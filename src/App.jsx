@@ -6,42 +6,41 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SigninForm from './components/SignInForm/SigninForm';
 import * as authService from '../src/services/authService';
-import { getUser } from '../src/services/authService';
+import BaseLayout from './components/BaseLayout/BaseLayout.jsx';
 
-
-export const AuthedUserContext = createContext(null); // set the initial value of the context to null
+export const AuthedUserContext = createContext(null); // Set the initial value of the context to null
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser()); // using the method from authservice
+	const [user, setUser] = useState(authService.getUser()); // Using the method from authService
 
-  useEffect(() => {
-    const loggedInUser = authService.getUser();
-    if (loggedInUser) {
-      setUser(loggedInUser);
-    }
-  }, []);
+	useEffect(() => {
+		const loggedInUser = authService.getUser();
+		if (loggedInUser) {
+			setUser(loggedInUser);
+		}
+	}, []);
 
+	const handleSignout = () => {
+		authService.signout();
+		setUser(null);
+	};
 
-  const handleSignout = () => {
-    authService.signout()
-    setUser(null)
-  }
-  
-
-  return (
-    <AuthedUserContext.Provider value={user}>
-      <NavBar handleSignout={handleSignout} />
-      <Routes>
-        {user ? (
-          <Route path="/" element={<Dashboard />} />
-        ) : (
-          <Route path="/" element={<Landing />} />
-        )}
-        <Route path="/signup" element={<SignupForm setUser={setUser} />} />
-        <Route path="/signin" element={<SigninForm setUser={setUser} />} />
-      </Routes>
-    </AuthedUserContext.Provider>
-  );
+	return (
+		<>
+			{/* <NavBar user={user} /> */}
+			<Routes>
+				<Route element={<BaseLayout />}>
+					{user ? (
+						<Route path='/' element={<Dashboard />} />
+					) : (
+						<Route path='/' element={<Landing />} />
+					)}
+					<Route path='/signup' element={<SignupForm setUser={setUser} />} />
+					<Route path='/signin' element={<SigninForm setUser={setUser} />} />
+				</Route>
+			</Routes>
+		</>
+	);
 };
 
 export default App;

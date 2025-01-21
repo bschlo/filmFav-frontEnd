@@ -1,0 +1,159 @@
+.main-content {
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 80px;
+	font-size: 2.5em;
+	color: #333;
+}
+.scroll-container {
+	position: relative;
+	padding-bottom: 40px;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	background-color: transparent;
+	justify-content: center;
+}
+
+.movie-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.movie-scroll {
+	display: flex;
+	gap: 20px;
+	overflow-x: auto;
+	padding: 0;
+	/* padding: 10px; */
+	width: 100%;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+}
+
+.movie-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll-button {
+	position: absolute;
+	bottom: -20px;
+	background-color: #333;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 50%;
+	z-index: 1000;
+	opacity: 0.7;
+}
+
+.movie-box {
+	flex: 0 0 auto;
+	width: 300px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	text-align: center;
+	padding: 15px;
+	margin-top: 120px;
+	margin-bottom: 50px;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.scroll-button.left {
+	left: -30px;
+}
+
+.scroll-button.right {
+	right: -30px;
+}
+.scroll-button {
+	position: absolute;
+	bottom: -10px;
+	background-color: #333;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 50%;
+	z-index: 1000;
+	opacity: 0.7;
+	transition: opacity 0.3s ease;
+}
+
+.scroll-button:hover {
+	opacity: 1;
+	background-color: #555;
+}
+.movie-box:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+.movie-title {
+	font-size: 1.5em;
+	margin: 15px 0 10px;
+	color: #333;
+}
+
+.movie-description {
+	font-size: 1em;
+	color: #666;
+	margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+	.movie-box {
+		width: 100%;
+	}
+}
+
+/* .movie-rating {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff9500; 
+} */
+
+/* ============================== */
+
+/* .landing-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+} */
+
+/* .landing-header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+} */
+
+/* ======================= */
+
+/* .featured-movies {
+  margin-top: 20px;
+}
+
+.movie-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+} */

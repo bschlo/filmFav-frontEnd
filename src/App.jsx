@@ -1,10 +1,10 @@
 import { createContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-import SignupForm from './components/SignUpForm/SignUpForm';
+import SigninForm from './components/SigninForm/SigninForm.jsx';
+import SignupForm from './components/SignUpForm/SignUpForm.jsx';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
-import SigninForm from './components/SignInForm/SigninForm';
 import * as authService from '../src/services/authService';
 import BaseLayout from './components/BaseLayout/BaseLayout.jsx';
 
@@ -27,7 +27,10 @@ const App = () => {
 
 	return (
 		<>
-			{/* <NavBar user={user} /> */}
+			<NavBar user={user} />
+			<div>
+				<SigninForm />
+			</div>
 			<Routes>
 				<Route element={<BaseLayout />}>
 					{user ? (
@@ -35,8 +38,8 @@ const App = () => {
 					) : (
 						<Route path='/' element={<Landing />} />
 					)}
-					<Route path='/signup' element={<SignupForm setUser={setUser} />} />
 					<Route path='/signin' element={<SigninForm setUser={setUser} />} />
+					<Route path='/signup' element={<SignupForm setUser={setUser} />} />
 				</Route>
 			</Routes>
 		</>

@@ -1,6 +1,26 @@
-.main-content {
+/* .main-content {
 	padding: 20px;
+} */
+
+.landing-page {
+	text-align: center;
+	margin-top: 50px;
 }
+
+button {
+	font-size: 1rem;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+/* ================= */
 
 h1 {
 	text-align: center;

@@ -1,0 +1,53 @@
+.landing {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+	background-color: #f2f4f8;
+}
+
+.center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+
+p {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+h1,
+h3 {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.logo_page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 330px;
+	width: 330px;
+	margin-top: 150px;
+	margin-left: 750px;
+	background-color: #f2f4f8;
+}
+
+.signup_link {
+	color: #fff;
+	text-decoration: solid;
+	font-size: larger;
+	text-decoration: none;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.text-white {
+	color: white;
+}

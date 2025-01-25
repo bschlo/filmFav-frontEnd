@@ -1,55 +1,79 @@
-.sign-in-form {
-	display: flex;
+.container {
 	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background-color: #f9f9f9;
+	height: 540px;
+	margin-top: 190px;
+	padding: 26px;
 }
 
-.sign-in-form form {
-	background: white;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	width: 300px;
-}
-
-.sign-in-form h2 {
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.sign-in-form label {
+.container h1 {
+	color: #fff;
+	font-size: 65px;
+	margin: 0;
+	margin-top: 150px;
+	visibility: visible;
 	display: block;
-	margin-bottom: 5px;
-	font-weight: bold;
+	position: relative;
+	z-index: 10;
 }
 
-.sign-in-form input {
-	width: 100%;
+form {
+	border: 3px solid #f1f1f1;
+	background-color: #fff;
 	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
+	margin-top: 10px;
+	margin-left: 380px;
+	width: 630px;
+	display: block;
 }
 
-.sign-in-form button {
+form h1 {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: black;
+	margin-top: 30px;
+}
+
+form input {
 	width: 100%;
-	padding: 10px;
-	background: #007bff;
-	color: white;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+	padding: 12px;
+	margin-bottom: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 	font-size: 16px;
 }
 
-.sign-in-form button:hover {
-	background: #0056b3;
+form button {
+	width: 100%;
+	padding: 12px;
+	background-color: #00a0df;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
 }
 
-.error-message {
-	color: red;
-	font-weight: bold;
-	margin-top: 10px;
+p {
+	text-align: center;
+	/* font-weight: 600; */
+}
+
+span {
+	font-style: italic;
+	font-weight: 600;
+	font-size: small;
+}
+.signup-link {
+	margin-top: 25px;
+}
+
+button:hover {
+	opacity: 0.8;
 }

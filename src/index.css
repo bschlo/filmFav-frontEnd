@@ -21,25 +21,27 @@ body {
 #root {
 	height: 100%;
 	width: 100%;
-	overflow: auto;
+	/* overflow: auto; */
 	padding-top: 80px;
 	background-color: rgb(55, 43, 20);
-	/* background-color: rgb(8, 8, 8); */
 }
 
 h1 {
 	font-size: 28px;
 	font-weight: 600;
 	color: #fff;
+	text-align: center;
+	margin-top: -790px;
+	margin-right: -90px;
 }
 
-h3 {
+/* h3 {
 	font-size: 20px;
 	font-weight: 500;
 	color: #fff;
-}
+} */
 
-p {
+/* p {
 	width: 100%;
 	font-size: 19px;
 	text-align: justify;
@@ -47,8 +49,8 @@ p {
 	text-align: center;
 	color: #fff;
 	margin-top: 22px;
-}
-
+} */
+/* 
 a {
 	color: black;
 	font-weight: 600;
@@ -58,4 +60,4 @@ a {
 button,
 a {
 	cursor: pointer;
-}
+} */

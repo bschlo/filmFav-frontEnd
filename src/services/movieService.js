@@ -22,6 +22,18 @@ const show = async (movieId) => {
   }
 }
 
+const showAllReviews = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/reviews/`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('access')}` },
+    })
+    console.log(res.json)
+    return res.json ()
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const createReview = async (movieId, reviewData) => {
   try {
     const res = await fetch(`${BASE_URL}/reviews/`, {
@@ -115,15 +127,32 @@ const deleteComment = async (commentId) => {
     console.error('Error deleting a comment:', error);
   }
 };
+const indexPagination = async (url) => {
+  try {
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('access')}` },
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch movies");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
 
 export { 
   index,
   show,
   createReview,
+  showAllReviews,
   showReviews,
   updateReview,
   deleteReview,
   createComment,
   showComments,
   deleteComment,
+  indexPagination,
 };

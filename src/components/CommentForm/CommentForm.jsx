@@ -1,6 +1,7 @@
 // src/components/CommentForm/CommentForm.jsx
 
 import { useState } from 'react';
+import './CommentForm.css';
 
 const CommentForm = ({ handleAddComment }) => {
   const [formData, setFormData] = useState({ text: '' });

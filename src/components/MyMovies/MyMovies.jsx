@@ -32,7 +32,7 @@ const MyMovies = () => {
         myMovies.map((movie) => (
           <li key={movie.id} className="mymovies-card">
             <article>
-              <Link to="movies/${movie.id}" className="mymovies-link"><img src={movie.poster_url} alt="poster_img" className="mymovies-img" /></Link>
+              <Link to={`/movies/${movie.id}`} className="mymovies-link"><img src={movie.poster_url} alt="poster_img" className="mymovies-img" /></Link>
               <div>
                 <button onClick={() => removeFromMyMovies([movie.id])} className="mymovies-btn">
                   Remove From My Watched Movies

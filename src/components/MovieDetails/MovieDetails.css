@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Parkinsans:wght@300..800&display=swap");
+
+body {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 50px 0 50px 0;
+  align-items: center;
+  align-content: center;
+}
+
+button {
+  font-family: "Jersey 15", sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(64, 61, 61);
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+  margin: 15px;
+  color: rgb(8, 8, 8);
+}
+
+.dashboard-dap {
+  border-right: 1px solid rgb(9, 8, 8);
+  height: 100%;
+}
+.user-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.posted-date {
+  width: 100%;
+  margin: 20px, 0, 10px, 0;
+}
+
+.detail-button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(64, 61, 61);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.detail-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+main {
+  margin: 50px 150px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 80px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+img {
+  height: 500px;
+  width: 333px;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-title {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 30px;
+}
+
+.release-year {
+  font-size: 30px;
+}
+
+.genres {
+  display: flex;
+  gap: 14px;
+}
+
+.genre {
+  display: flex;
+  gap: 14px;
+  border: 15px solid white;
+  width: 70px;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  justify-content: center;
+}
+
+.movie-rating {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.reviews-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.reviews-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 30px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.8);
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 150px;
+  width: 80%;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 20px 20px 10px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 9);
+  width: 90%;
+  height: 40px;
+  border-radius: 30px;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-rating {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.posted-date {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.comment-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+}
+
+.comments-label {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.delete-comment-btn {
+  margin-bottom: 30px;
+}

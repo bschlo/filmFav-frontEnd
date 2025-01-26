@@ -1,0 +1,159 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.dashboard-welcome {
+    font-size: 50px;
+}
+
+.dashboard-gap {
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+.dashboard-about {
+    font-size: 40px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.rated-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+.rated-message {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.rated-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 20px;
+    width: 100%;
+    height: 700px;
+}
+
+.rated-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.rated-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 4px; 
+}
+
+.rated-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.rated-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    margin: 10px 8px 10px 8px;
+}
+
+.rated-card:hover {
+    transform: scale(1.15);
+}
+
+.rated-average {
+    font-size: 35px;
+    font-weight: bold;
+    color: white; 
+    position: absolute; 
+    bottom: 85px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    width: 280px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    border-radius: 0 0 15px 15px;
+}
+
+.rated-card:hover .rated-average {
+    opacity: 1;
+}
+
+.latest-review {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; 
+    position: absolute; 
+    bottom: 135px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    width: 280px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    font-style: italic;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    white-space: normal;
+}
+
+.rated-card:hover .latest-review {
+    opacity: 1;
+}
+
+.rated-image {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .rated-image {
+        width: 150px;
+        height: 225px;
+    }
+
+    .rated-list {
+        gap: 10px;
+    }
+
+    .rated-card {
+        width: 200px;
+    }
+}
+

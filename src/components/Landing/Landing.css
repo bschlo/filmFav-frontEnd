@@ -1,0 +1,111 @@
+.landing {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin-top: 20px;
+	text-align: center;
+	background-color: #f2f4f8;
+}
+
+.center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+
+p {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+.span-signup {
+	font-style: italic;
+	font-weight: 600;
+	margin-right: 10px;
+	color: orange;
+}
+h3 span {
+	color: #fff;
+	font-style: normal;
+}
+
+h1,
+h3 {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.logo_page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 330px;
+	width: 330px;
+	margin-top: 100px;
+	margin-left: 750px;
+	background-color: #f2f4f8;
+}
+
+.signup_link {
+	color: #fff;
+	text-decoration: solid;
+	font-size: larger;
+	text-decoration: none;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.text-white {
+	color: white;
+}
+.video-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.video-row video {
+	width: 190px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.span-signup {
+	position: relative;
+	display: inline-block;
+	color: #007bff;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.span-signup:hover {
+	/* color: #0056b3; */
+	color: orange;
+}
+
+.span-signup::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: rgba(0, 123, 255, 0.5);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+}
+
+.span-signup:hover::before {
+	transform: scaleX(1);
+}

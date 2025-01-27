@@ -3,9 +3,27 @@
 	display: flex;
 	width: 100%;
 	overflow: hidden;
-	background-color: rgb(18, 12, 3);
+	background-color: black;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
 }
 
+.FormAndVideos{
+	display: flex;
+	flex-direction: row;
+	gap: 200px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+}
+
+
+label {
+	color: white;
+}
 .videoSection {
 	flex: 1;
 	display: flex;
@@ -17,12 +35,8 @@
 }
 
 .video {
-	width: 65%;
-	max-height: 75%;
-	border-radius: 10px;
-	display: flex;
-	margin-left: -200px;
-	margin-bottom: 80px;
+	height: 100%;
+
 }
 .videoSection .video:nth-child(1) {
 	margin-bottom: 50px;
@@ -30,6 +44,7 @@
 .videoSection .video:nth-child(2) {
 	margin-top: -20px;
 }
+
 
 form {
 	border: 3px solid #f1f1f1;
@@ -63,14 +78,21 @@ form {
 	position: relative;
 }
 
-form {
-	border: 3px solid #f1f1f1;
-	background-color: #fff;
-	padding: 20px;
-	margin-top: -25px;
-	width: 530px;
-	max-width: 90%;
-	display: block;
+.signin-form {
+	display: flex
+	;
+		align-items: center;
+		margin: 30px auto;
+		padding: 20px;
+		width: 600px;
+		background-color: #1a1a1a;
+		border-radius: 10px;
+		box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		color: #f0f0f0;
+		justify-content: center;
 }
 form label {
 	display: block;
@@ -90,16 +112,23 @@ form input {
 }
 
 form button {
-	width: 100%;
-	padding: 12px;
-	background-color: #00a0df;
-	color: white;
-	font-weight: bold;
-	border: none;
-	border-radius: 15px;
-	font-size: 16px;
-	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Jersey 15", sans-serif;
+	margin-bottom: 20px;
 	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: rgb(64, 61, 61);
+	cursor: pointer;
+	font-size: 18px;
+	box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+	margin: 15px;
+	color: rgb(8, 8, 8);
 }
 
 p {
@@ -117,6 +146,10 @@ span {
 
 button:hover {
 	opacity: 0.8;
+}
+
+.videoSection {
+	background-color: black;
 }
 
 @media only screen and (max-width: 912px) {

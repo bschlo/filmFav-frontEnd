@@ -31,7 +31,7 @@ const MyMovies = () => {
       {myMovies.length > 0 ? (
         myMovies.map((movie) => (
           <li key={movie.id} className="mymovies-card">
-            <article>
+            <article className="mymovies-article">
               <Link to={`/movies/${movie.id}`} className="mymovies-link"><img src={movie.poster_url} alt="poster_img" className="mymovies-img" /></Link>
               <div>
                 <button onClick={() => removeFromMyMovies([movie.id])} className="mymovies-btn">
@@ -42,7 +42,7 @@ const MyMovies = () => {
           </li>
         ))
       ) : (
-        <p>my movies cart is empty</p>
+        <p>My Movies Is Empty</p>
       )}
     </ul>
   );

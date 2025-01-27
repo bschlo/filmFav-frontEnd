@@ -34,11 +34,14 @@ const SigninForm = (props) => {
 
 	return (
 		<main className='container'>
+			<h1 className='formTitle'>Sign In</h1>
+			<div className='FormAndVideos'>
 			<section className='formSection'>
-				<h1 className='formTitle1'>Login</h1>
-				<form autoComplete='off' onSubmit={handleSubmit}>
-					<div>
-						<label htmlFor='email'>Username:</label>
+				<form autoComplete='off' onSubmit={handleSubmit} className='signin-form'>
+					<div >
+						<div className='Username'>
+						<label htmlFor='email' className='username'>Username:</label>
+						</div>
 						<input
 							type='text'
 							autoComplete='off'
@@ -49,7 +52,7 @@ const SigninForm = (props) => {
 						/>
 					</div>
 					<div>
-						<label htmlFor='password'>Password:</label>
+						<label htmlFor='password' className='password'>Password:</label>
 						<input
 							type='password'
 							autoComplete='off'
@@ -81,6 +84,7 @@ const SigninForm = (props) => {
 					<source src='/public/videos/ben_ten.mp4' />
 				</video>
 			</section>
+			</div>
 		</main>
 	);
 };

@@ -4,6 +4,8 @@
 	width: 100%;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
 .signup-content {
@@ -33,13 +35,43 @@
 	object-fit: cover; /* Maintain aspect ratio while filling the dimensions */
 }
 
-/* Form Section */
-.formSection {
-	flex: 1.2;
+.signup-form{
 	display: flex;
+	width: 550px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+	
+}
+
+.signup-title {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	align-content: center;
+}
+
+.username{
+	color: white;
+}
+
+.password{
+	color: white;
+}
+
+.confirm {
+	color: white;
+}
+
+/* Form Section */
+.formSection {
+	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 
 }
 
@@ -51,11 +83,10 @@
 }
 
 form {
-	width: 100%;
-	max-width: 400px;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+	width: 530px;
 }
 
 form label {
@@ -63,6 +94,8 @@ form label {
 	color: white;
 	margin-bottom: 8px;
 }
+
+
 
 form input {
 	width: 100%;
@@ -75,13 +108,13 @@ form input {
 form input:focus {
 	border-color: #00a0df;
 	outline: none;
-	box-shadow: 0 0 4px rgba(0, 160, 223, 0.6);
+	box-shadow: 0 0 4px rgba(243, 244, 245, 0.6);
 }
 
 form button {
 	width: 100%;
 	padding: 12px;
-	background-color: #00a0df;
+	background-color: #7b7c7d;
 	color: white;
 	font-weight: bold;
 	border: none;
@@ -92,7 +125,7 @@ form button {
 }
 
 form button:hover {
-	background-color: #008ac1;
+	background-color: #d2d6d8;
 }
 
 @media only screen and (max-width: 912px) {
@@ -100,12 +133,12 @@ form button:hover {
 		flex-direction: column;
 	}
 
-	.videoSection,
+	/* .videoSection,
 	.formSection {
 		width: 100%;
 		height: auto;
 		padding: 10px;
-	}
+	} */
 
 	.videoSection {
 		align-items: center; /* Center videos on smaller screens */

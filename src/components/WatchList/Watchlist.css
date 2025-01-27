@@ -46,3 +46,9 @@ body {
 .watchlist-movie-card:hover {
     transform: scale(1.15);
 }
+
+.watchlist-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

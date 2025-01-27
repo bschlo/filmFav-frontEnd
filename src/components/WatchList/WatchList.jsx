@@ -32,7 +32,7 @@ const WatchList = () => {
       {watchList.length > 0 ? (
         watchList.map((movie) => (
           <li key={movie.id} className="watchlist-movie-card">
-            <article>
+            <article className="watchlist-article">
               <Link to={`/movies/${movie.id}`} className="movie-link"><img src={movie.poster_url} alt="poster_img" className="watch-img" /></Link>
               <div>
                 <button onClick={() => removeFromMyWatchlist([movie.id])} className="remove-btn">
@@ -43,7 +43,7 @@ const WatchList = () => {
           </li>
         ))
       ) : (
-        <p>my Watchlist is empty</p>
+        <p>My Watchlist Is Empty</p>
       )}
     </ul>
   );

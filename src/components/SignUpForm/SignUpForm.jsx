@@ -40,8 +40,8 @@ const SignupForm = (props) => {
 
 	return (
 		<main className='container'>
+			<h1 className='formTitle'>Sign Up</h1>
             <div className='signup-content'>
-			{/* Left Section: Video */}
 			<section className='videoSection'>
 				<video className='video-signup' autoPlay muted loop>
 					<source src='/public/videos/topgun.mp4' />
@@ -50,13 +50,11 @@ const SignupForm = (props) => {
 					<source src='/public/videos/sonic.mp4' />
 				</video>
 			</section>
-
-			{/* Right Section: Signup Form */}
+			
 			<section className='formSection'>
-				<h1 className='formTitle'>Sign Up</h1>
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleSubmit} className='signup-form'>
 					<div>
-						<label htmlFor='username'>Username:</label>
+						<label htmlFor='username' className='username'>Username:</label>
 						<input
 							type='text'
 							id='name'
@@ -66,7 +64,7 @@ const SignupForm = (props) => {
 						/>
 					</div>
 					<div>
-						<label htmlFor='password'>Password:</label>
+						<label htmlFor='password' className='password'>Password:</label>
 						<input
 							type='password'
 							id='password'
@@ -76,7 +74,7 @@ const SignupForm = (props) => {
 						/>
 					</div>
 					<div>
-						<label htmlFor='confirm'>Confirm Password:</label>
+						<label htmlFor='confirm' className='confirm'>Confirm Password:</label>
 						<input
 							type='password'
 							id='confirm'

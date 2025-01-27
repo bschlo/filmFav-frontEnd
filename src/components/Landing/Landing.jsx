@@ -35,12 +35,6 @@ const Landing = () => {
 					muted
 				/>
 				<video
-					src='/public/videos/transpormer.mp4'
-					autoPlay
-					loop
-					muted
-				/>
-				<video
 					src='/public/videos/how_to_train_your_dragon.mp4'
 					autoPlay
 					loop

@@ -1,43 +1,10 @@
 import { useContext } from 'react';
-import { useState, useEffect, useContext } from 'react';
 import { AuthedUserContext } from '../../App';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = ({ handleSignout }) => {
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_SERVER_URL;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const user = useContext(AuthedUserContext);
-
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleLinkClick = () => {
-    setSearchQuery(''); 
-    setSearchResults([]);
-  };
-
-  useEffect(() => {
-    const fetchSearchResults = async () => {
-      if (searchQuery.trim() === '') {
-        setSearchResults([]);
-        return;
-      }
-      try {
-        const response = await fetch(`${BACKEND_URL}/search/?query=${searchQuery}`);
-        const data = await response.json();
-        setSearchResults(data);
-      } catch (error) {
-        console.error('Error fetching search results:', error);
-      }
-    };
-
-    const debounceTimeout = setTimeout(fetchSearchResults, 500);
-
-    return () => clearTimeout(debounceTimeout);
-  }, [searchQuery]);
+	const user = useContext(AuthedUserContext);
 
 	return (
 		<>
@@ -52,29 +19,6 @@ const NavBar = ({ handleSignout }) => {
 								/>
 							</Link>
 						</li>
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            placeholder="Search movies..."
-          />
-
-          {searchQuery && (
-            <div className="search-results">
-              {searchResults.length > 0 ? (
-                <ul>
-                  {searchResults.map(movie => (
-                    <li key={movie.id}>
-                      <Link to={`/movies/${movie.id}`} onClick={handleLinkClick}>
-                        {movie.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>No results found</p>
-              )}
-            </div>
 						<li>
 							<Link to='/movies' className='nav-link'>
 								Movies

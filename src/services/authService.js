@@ -1,7 +1,6 @@
 // src/services/authService.js
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_SERVER_URL 
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_SERVER_URL; 
 
 const signup = async (formData) => {
   try {
@@ -10,7 +9,7 @@ const signup = async (formData) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
-       
+
     // Check if the response status is OK
     if (!res.ok) {
       const errorMessage = await res.text(); // Read the response body in case of error
@@ -23,7 +22,6 @@ const signup = async (formData) => {
       localStorage.setItem('access', json.access); // Store the JWT token in localStorage
 
       const user = json.user
-    
       return user;
     }
 

@@ -34,45 +34,53 @@ const SigninForm = (props) => {
 
 	return (
 		<main className='container'>
-			<h1>Log in</h1>
-			<form autoComplete='off' onSubmit={handleSubmit}>
-				<div>
-					<label htmlFor='email'>Username:</label>
-					<input
-						type='text'
-						autoComplete='off'
-						id='username'
-						value={formData.username}
-						name='username'
-						onChange={handleChange}
-					/>
-				</div>
-				<div>
-					<label htmlFor='password'>Password:</label>
-					<input
-						type='password'
-						autoComplete='off'
-						id='password'
-						value={formData.password}
-						name='password'
-						onChange={handleChange}
-					/>
-				</div>
-				<div className='form-sign'>
-					<button>Log In</button>
-					<Link to='/'>
-						<button>Cancel</button>
-					</Link>
-				</div>
-				<p className='signup-link'>
-					Don't have an account? {''}
-					<span>
-						{/* <strong> */}
-						<Link to='/signup'>Sign up here</Link>
-						{/* </strong> */}
-					</span>
-				</p>
-			</form>
+			<section className='formSection'>
+				<h1 className='formTitle1'>Login</h1>
+				<form autoComplete='off' onSubmit={handleSubmit}>
+					<div>
+						<label htmlFor='email'>Username:</label>
+						<input
+							type='text'
+							autoComplete='off'
+							id='username'
+							value={formData.username}
+							name='username'
+							onChange={handleChange}
+						/>
+					</div>
+					<div>
+						<label htmlFor='password'>Password:</label>
+						<input
+							type='password'
+							autoComplete='off'
+							id='password'
+							value={formData.password}
+							name='password'
+							onChange={handleChange}
+						/>
+					</div>
+					<div className='form-sign'>
+						<button>Log In</button>
+						<Link to='/'>
+							<button>Cancel</button>
+						</Link>
+					</div>
+					<p className='signup-link'>
+						Don't have an account? {''}
+						<span>
+							<Link to='/signup'>Sign up here</Link>
+						</span>
+					</p>
+				</form>
+			</section>
+			<section className='videoSection'>
+				<video className='video' autoPlay muted loop>
+					<source src='/public/videos/superman12.mp4' />
+				</video>
+				<video className='video' autoPlay muted loop>
+					<source src='/public/videos/ben_ten.mp4' />
+				</video>
+			</section>
 		</main>
 	);
 };
